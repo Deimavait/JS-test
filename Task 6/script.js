@@ -19,3 +19,19 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+// 1
+let allAges = 0;
+const getUserAverageAge = (users) => {
+  users.forEach((user) => (allAges += user.age));
+  let averageAge = allAges / users.length;
+  return averageAge;
+};
+
+console.log(getUserAverageAge(users).toFixed(2));
+
+// 2
+const getUsersNames = (users) => {
+  return users.map((user) => user.name);
+};
+
+console.log(getUsersNames(users));
